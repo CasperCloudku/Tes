@@ -29,8 +29,8 @@ document.addEventListener('scroll', function() {
 
     // Tampilkan judul dengan efek fade-in saat mencapai bagian home
     if (value >= 200) { // Ubah nilai ambang sesuai dengan kebutuhan Anda
-        title.classList.add('show');
-    } else {
         title.classList.remove('show');
+    } else {
+        title.classList.add('show');
     }
 })
