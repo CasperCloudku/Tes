@@ -12,18 +12,25 @@ document.addEventListener('scroll', function() {
 
     // Mengubah efek saat scroll menjadi malam
     if (hour >= 18 || hour <= 6) {
-        document.body.style.backgroundColor = '#000' // Ubah warna background menjadi hitam saat malam
+        document.body.style.backgroundColor = '#000'; // Ubah warna background menjadi hitam saat malam
         // Tambahkan efek lain yang diinginkan saat malam
     } else {
-        document.body.style.backgroundColor = '#fff' // Kembalikan warna background ke putih saat siang
+        document.body.style.backgroundColor = '#fff'; // Kembalikan warna background ke putih saat siang
         // Hapus efek malam yang telah ditambahkan sebelumnya
     }
 
     // Implementasi perubahan elemen lain sesuai kebutuhan
-    title.style.marginTop = value * 1.1 + 'px'
-    leaf1.style.marginLeft = -value + 'px'
-    leaf2.style.marginLeft = value + 'px'
-    bush2.style.marginBottom = -value + 'px'
-    mount1.style.marginBottom = -value * 1.1 + 'px'
-    mount2.style.marginBottom = -value * 1.2 + 'px'
+    title.style.marginTop = value * 1.1 + 'px';
+    leaf1.style.marginLeft = -value + 'px';
+    leaf2.style.marginLeft = value + 'px';
+    bush2.style.marginBottom = -value + 'px';
+    mount1.style.marginBottom = -value * 1.1 + 'px';
+    mount2.style.marginBottom = -value * 1.2 + 'px';
+
+    // Tampilkan judul dengan efek fade-in saat mencapai bagian home
+    if (value >= 200) { // Ubah nilai ambang sesuai dengan kebutuhan Anda
+        title.classList.add('show');
+    } else {
+        title.classList.remove('show');
+    }
 })
